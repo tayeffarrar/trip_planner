@@ -118,4 +118,4 @@ class User
 end
 
 trip_planner = TripPlanner.new
-trip_planner.start
+trip_planner.plan
