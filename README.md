@@ -1,3 +1,5 @@
+
+
 # TripPlanner
 
 We are going on a trip later today, and we want to create an application that will help us pack our bags based on the weather at our destination.  
@@ -107,18 +109,20 @@ For methods inside the class, you can just access these constants as written: `A
 ## Methods
 
 ### `Weather#appropriate_clothing`
-Appropriate clothing depends on what temperatures you'll have to endure for the day.  This method should `select` and `map` from the `CLOTHES` array the suggestions appropriate for both the `min_temp` and `max_temp`.
+Appropriate clothing depends on what temperatures you'll have to endure for the day.  This method should utilize the class method `Weather::clothing_for` to grab the clothing for the max and min temps, and return those results as an array of suggestions without repeat.
 
 ### `Weather#appropriate_accessories`
-Appropriate accessories depend on what conditions you'll face that day.  This method should `select` and `map` from the `ACCESSORIES` array the suggestions appropriate for `condition`.
+Appropriate accessories depend on what conditions you'll face that day.  This method should utilize the class method `Weather::accessories_for` to grab the accessories for the condition, and return those results as an array of suggestions without repeat.
 
 ## Class Methods
 
 To make the previous two methods easier to implement, let's create two class level methods to do the actual lookup with our constants:
 
 ### `Weather::clothing_for`
+This class should actually do the heavy lifting for `Weather#appropriate_clothing`.  It should `select` and `map` from the `CLOTHES` array the suggestions appropriate for `condition`.
 
 ### `Weather::accessories_for`
+This class should actually do the heavy lifting for `Weather#appropriate_accessories`.  It should `select` and `map` from the `ACCESSORIES` array the suggestions appropriate for `condition`.
 
 # Part C - `User`
 
