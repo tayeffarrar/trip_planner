@@ -1,4 +1,5 @@
 require 'httparty'
+require 'cgi'
 
 class TripPlanner
   attr_reader :user, :forecast, :recommendation
